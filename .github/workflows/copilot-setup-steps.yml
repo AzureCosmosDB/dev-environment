@@ -1,0 +1,15 @@
+name: Copilot setup steps
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Azure Cosmos DB Agent Kit
+        run: npx --yes skills add AzureCosmosDB/cosmosdb-agent-kit
