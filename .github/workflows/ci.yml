@@ -1,0 +1,29 @@
+name: Documentation CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  markdown:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Lint maintained Markdown
+        run: >-
+          npx --yes markdownlint-cli2
+          "AGENTS.md"
+          "CLAUDE.md"
+          "CHANGELOG.md"
+          "readme.md"
+          ".github/SECURITY.md"
+          ".github/PULL_REQUEST_TEMPLATE.md"
+          ".github/agents/*.md"

@@ -1,0 +1,41 @@
+name: Feature request
+description: Propose an improvement to the development environment or agent guidance.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Contributor need
+      description: What task is difficult or error-prone today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the smallest change that would address the need.
+    validations:
+      required: true
+  - type: textarea
+    id: article
+    attributes:
+      label: Related Microsoft Learn content
+      description: Link relevant Azure Cosmos DB documentation, if any.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: Explain how a contributor can verify the change without using production resources or secrets.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope checks
+      options:
+        - label: This proposal does not require committing credentials or production configuration.
+          required: true
+        - label: I searched existing issues for a similar proposal.
+          required: true

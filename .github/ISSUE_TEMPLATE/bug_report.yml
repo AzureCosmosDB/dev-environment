@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a reproducible problem with the development environment guidance.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve the Azure Cosmos DB agent environment.
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem
+      description: Describe what happened and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      description: Include the launch prompt or documentation link when relevant. Remove secrets and identifiers.
+      placeholder: |
+        1. Launch the coding agent with...
+        2. Ask it to...
+        3. Observe...
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: Agent and client
+      description: For example, GitHub Copilot in VS Code or Claude Code.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Paste sanitized errors or logs. Do not include credentials, tokens, endpoints, or customer data.
+      render: shell
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety checks
+      options:
+        - label: I removed secrets, credentials, tokens, resource identifiers, and customer data.
+          required: true
+        - label: I searched existing issues for this problem.
+          required: true

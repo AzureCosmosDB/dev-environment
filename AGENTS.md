@@ -6,7 +6,8 @@ This repository is a neutral development environment for AI coding agents launch
 
 1. Read the full prompt that launched this session.
 1. If the prompt includes a Microsoft Learn article URL, read the article before creating code.
-1. Install the Azure Cosmos DB Agent Kit if it isn't already available:
+1. Use the Azure Cosmos DB Agent Kit installed by the client setup. If the
+   client doesn't run `.github/workflows/copilot-setup-steps.yml`, install it:
 
    ```bash
    npx --yes skills add AzureCosmosDB/cosmosdb-agent-kit
